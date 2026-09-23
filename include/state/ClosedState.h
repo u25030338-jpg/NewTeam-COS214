@@ -1,7 +1,7 @@
 #ifndef CLOSED_STATE_H
 #define CLOSED_STATE_H
 
-#include "state/IncidentState.h"
+#include "IncidentState.h"
 
 class ClosedState : public IncidentState
 {

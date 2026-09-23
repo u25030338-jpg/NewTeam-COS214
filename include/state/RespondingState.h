@@ -1,7 +1,7 @@
 #ifndef RESPONDING_STATE_H
 #define RESPONDING_STATE_H
 
-#include "state/IncidentState.h"
+#include "IncidentState.h"
 
 class RespondingState : public IncidentState
 {

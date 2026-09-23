@@ -1,7 +1,7 @@
 #ifndef REPORTED_STATE_H
 #define REPORTED_STATE_H
 
-#include "state/IncidentState.h"
+#include "IncidentState.h"
 
 class ReportedState : public IncidentState
 {

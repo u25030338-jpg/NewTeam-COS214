@@ -1,7 +1,7 @@
 #ifndef RESOLVED_STATE_H
 #define RESOLVED_STATE_H
 
-#include "state/IncidentState.h"
+#include "IncidentState.h"
 
 class ResolvedState : public IncidentState
 {

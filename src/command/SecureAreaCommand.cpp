@@ -1,5 +1,6 @@
-#include "command/SecureAreaCommand.h"
-#include "domain/Incident.h"
+#include "SecureAreaCommand.h"
+#include "Incident.h"
+#include "Mediator.h"
 
 #include <iostream>
 
@@ -15,4 +16,6 @@ void SecureAreaCommand::execute()
               << " for incident "
               << incident.getId()
               << "." << std::endl;
+
+    if(incident.getMediator()) incident.getMediator()->notify(nullptr, incident, "SECURE_AREA_REQUESTED");
 }

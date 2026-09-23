@@ -1,7 +1,7 @@
 #ifndef SECURE_AREA_COMMAND_H
 #define SECURE_AREA_COMMAND_H
 
-#include "command/Command.h"
+#include "Command.h"
 
 class Incident;
 

@@ -1,7 +1,7 @@
 #ifndef EMERGENCY_ALERT_COMMAND_H
 #define EMERGENCY_ALERT_COMMAND_H
 
-#include "command/Command.h"
+#include "Command.h"
 #include <string>
 
 class Incident;

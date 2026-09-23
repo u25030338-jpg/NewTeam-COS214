@@ -1,4 +1,4 @@
-#include "command/CommandInvoker.h"
+#include "CommandInvoker.h"
 
 CommandInvoker::CommandInvoker()
     : command(nullptr)
