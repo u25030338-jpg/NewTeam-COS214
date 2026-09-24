@@ -10,10 +10,12 @@ void RespondingState::assess(Incident& incident)
               << " is already being responded to." << std::endl;
 }
 
-void RespondingState::dispatch(Incident& incident)
+bool RespondingState::dispatch(Incident& incident)
 {
-    std::cout << "Response teams have already been dispatched for incident "
+    std::cout << "Additional response unit dispatched for incident "
               << incident.getId() << "." << std::endl;
+
+    return true;
 }
 
 void RespondingState::resolve(Incident& incident)

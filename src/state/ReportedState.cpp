@@ -12,11 +12,13 @@ void ReportedState::assess(Incident& incident)
     incident.setState(new AssessingState());
 }
 
-void ReportedState::dispatch(Incident& incident)
+bool ReportedState::dispatch(Incident& incident)
 {
     std::cout << "Cannot dispatch incident "
               << incident.getId()
               << " before it has been assessed." << std::endl;
+
+    return false;          
 }
 
 void ReportedState::resolve(Incident& incident)

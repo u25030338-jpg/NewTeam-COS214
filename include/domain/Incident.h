@@ -42,7 +42,7 @@ public:
     void setResponseStrategy(ResponseStrategy* newStrategy);
 
     void assess();
-    void dispatch();
+    bool dispatch();
     void resolve();
     void close();
 

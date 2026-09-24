@@ -79,9 +79,9 @@ void Incident::assess()
     state->assess(*this);
 }
 
-void Incident::dispatch()
+bool Incident::dispatch()
 {
-    state->dispatch(*this);
+    return state->dispatch(*this);
 }
 
 void Incident::resolve()

@@ -10,11 +10,13 @@ void ResolvedState::assess(Incident& incident)
               << " has already been resolved." << std::endl;
 }
 
-void ResolvedState::dispatch(Incident& incident)
+bool ResolvedState::dispatch(Incident& incident)
 {
     std::cout << "Cannot dispatch incident "
               << incident.getId()
               << " because it has already been resolved." << std::endl;
+
+    return false;
 }
 
 void ResolvedState::resolve(Incident& incident)

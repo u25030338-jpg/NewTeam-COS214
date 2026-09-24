@@ -9,7 +9,7 @@ public:
     virtual ~IncidentState() = default;
 
     virtual void assess(Incident& incident) = 0;
-    virtual void dispatch(Incident& incident) = 0;
+    virtual bool dispatch(Incident& incident) = 0;
     virtual void resolve(Incident& incident) = 0;
     virtual void close(Incident& incident) = 0;
 

@@ -22,24 +22,30 @@ void EmergencyMediator::notify(ResponseComponent* sender, Incident& incident, co
 {
     std::string evt(event);
 
-    if (evt == "UNIT_DISPATCHED")
-    {
-        // Route to the team matching the incident type. Falls back to facilities for anything that isn't clearly medical or security, matching the incident type strings used elsewhere in the project.
-        const std::string& type = incident.getType();
+    const std::string dispatchPrefix = "UNIT_DISPATCHED:";
 
-        if (type.find("Medical") != std::string::npos)
-        {
-            medical->handleIncident(incident);
-        }
-        else if (type.find("Security") != std::string::npos)
-        {
-            security->handleIncident(incident);
-        }
-        else
-        {
-            facilities->handleIncident(incident);
-        }
+if (evt.compare(0, dispatchPrefix.size(), dispatchPrefix) == 0)
+{
+    std::string unitType = evt.substr(dispatchPrefix.size());
+
+    if (unitType == "Medical")
+    {
+        medical->handleIncident(incident);
     }
+    else if (unitType == "Security")
+    {
+        security->handleIncident(incident);
+    }
+    else if (unitType == "Facilities")
+    {
+        facilities->handleIncident(incident);
+    }
+    else
+    {
+        std::cout << "[MEDIATOR] Unknown response unit: "
+                  << unitType << "." << std::endl;
+    }
+}
     else if (evt == "SECURE_AREA_REQUESTED")
     {
         bool restricted = accessControl->restrictArea(incident.getLocation());

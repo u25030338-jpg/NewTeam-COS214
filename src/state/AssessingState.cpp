@@ -10,12 +10,14 @@ void AssessingState::assess(Incident& incident)
               << " is already being assessed." << std::endl;
 }
 
-void AssessingState::dispatch(Incident& incident)
+bool AssessingState::dispatch(Incident& incident)
 {
     std::cout << "Incident " << incident.getId()
               << " is now being responded to." << std::endl;
 
     incident.setState(new RespondingState());
+
+    return false;
 }
 
 void AssessingState::resolve(Incident& incident)

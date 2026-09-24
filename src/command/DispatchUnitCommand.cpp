@@ -4,8 +4,9 @@
 
 #include <iostream>
 
-DispatchUnitCommand::DispatchUnitCommand(Incident& incident,
-                                         const std::string& unitType)
+DispatchUnitCommand::DispatchUnitCommand(
+    Incident& incident,
+    const std::string& unitType)
     : incident(incident),
       unitType(unitType)
 {
@@ -17,7 +18,19 @@ void DispatchUnitCommand::execute()
               << " unit to incident "
               << incident.getId() << "." << std::endl;
 
-    incident.dispatch();
+    if (!incident.dispatch())
+    {
+        return;
+    }
 
-    if(incident.getMediator()) incident.getMediator()->notify(nullptr, incident, ("UNIT_DISPATCHED: " + unitType).c_str());
+    if (incident.getMediator())
+    {
+        std::string event = "UNIT_DISPATCHED:" + unitType;
+
+        incident.getMediator()->notify(
+            nullptr,
+            incident,
+            event.c_str()
+        );
+    }
 }

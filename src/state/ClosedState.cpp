@@ -10,11 +10,13 @@ void ClosedState::assess(Incident& incident)
               << " because it is closed." << std::endl;
 }
 
-void ClosedState::dispatch(Incident& incident)
+bool ClosedState::dispatch(Incident& incident)
 {
     std::cout << "Cannot dispatch incident "
               << incident.getId()
               << " because it is closed." << std::endl;
+
+    return false;
 }
 
 void ClosedState::resolve(Incident& incident)

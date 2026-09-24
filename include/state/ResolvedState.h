@@ -7,7 +7,7 @@ class ResolvedState : public IncidentState
 {
 public:
     void assess(Incident& incident) override;
-    void dispatch(Incident& incident) override;
+    bool dispatch(Incident& incident) override;
     void resolve(Incident& incident) override;
     void close(Incident& incident) override;
 

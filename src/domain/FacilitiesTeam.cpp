@@ -11,9 +11,13 @@ FacilitiesTeam::FacilitiesTeam(const std::string& name)
 
 void FacilitiesTeam::handleIncident(Incident& incident)
 {
-    std::cout << "[FACILITIES] " << name << " managing building systems for incident "
-              << incident.getId() << " at " << incident.getLocation()
-              << "." << std::endl;
+    std::cout << "[FACILITIES] " << name
+              << " managing building systems for incident "
+              << incident.getId()
+              << " at "
+              << incident.getLocation()
+              << "."
+              << std::endl;
 
     if (mediator)
     {
@@ -21,24 +25,32 @@ void FacilitiesTeam::handleIncident(Incident& incident)
     }
 }
 
-void FacilitiesTeam::coordinate(Incident& incident, const std::string& event)
+void FacilitiesTeam::coordinate(
+    Incident& incident,
+    const std::string& event)
 {
     if (event == "SECURE_AREA_REQUESTED")
     {
         std::cout << "[FACILITIES] " << name
                   << " standing by to lock down the area for incident "
-                  << incident.getId() << "." << std::endl;
+                  << incident.getId()
+                  << "."
+                  << std::endl;
     }
     else if (event == "SECURITY_ON_SCENE")
     {
         std::cout << "[FACILITIES] " << name
                   << " coordinating building access with security for incident "
-                  << incident.getId() << "." << std::endl;
+                  << incident.getId()
+                  << "."
+                  << std::endl;
     }
     else if (event == "EMERGENCY_ALERT")
     {
         std::cout << "[FACILITIES] " << name
                   << " preparing building systems following the emergency broadcast for incident "
-                  << incident.getId() << "." << std::endl;
+                  << incident.getId()
+                  << "."
+                  << std::endl;
     }
 }
