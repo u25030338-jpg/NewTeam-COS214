@@ -1,5 +1,6 @@
-#include "command/DispatchUnitCommand.h"
-#include "domain/Incident.h"
+#include "DispatchUnitCommand.h"
+#include "Incident.h"
+#include "Mediator.h"
 
 #include <iostream>
 
@@ -17,4 +18,6 @@ void DispatchUnitCommand::execute()
               << incident.getId() << "." << std::endl;
 
     incident.dispatch();
+
+    if(incident.getMediator()) incident.getMediator()->notify(nullptr, incident, ("UNIT_DISPATCHED: " + unitType).c_str());
 }

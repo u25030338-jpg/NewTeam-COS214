@@ -1,6 +1,6 @@
-#include "state/AssessingState.h"
-#include "domain/Incident.h"
-#include "state/RespondingState.h"
+#include "AssessingState.h"
+#include "Incident.h"
+#include "RespondingState.h"
 
 #include <iostream>
 

@@ -1,7 +1,7 @@
 #ifndef ASSESSING_STATE_H
 #define ASSESSING_STATE_H
 
-#include "state/IncidentState.h"
+#include "IncidentState.h"
 
 class AssessingState : public IncidentState
 {

@@ -1,6 +1,6 @@
-#include "state/ResolvedState.h"
-#include "domain/Incident.h"
-#include "state/ClosedState.h"
+#include "ResolvedState.h"
+#include "Incident.h"
+#include "ClosedState.h"
 
 #include <iostream>
 

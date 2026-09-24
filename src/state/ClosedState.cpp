@@ -1,5 +1,5 @@
-#include "state/ClosedState.h"
-#include "domain/Incident.h"
+#include "ClosedState.h"
+#include "Incident.h"
 
 #include <iostream>
 

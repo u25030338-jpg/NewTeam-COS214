@@ -1,7 +1,7 @@
 #ifndef DISPATCHUNITCOMMAND_H
 #define DISPATCHUNITCOMMAND_H
 
-#include "command/Command.h"
+#include "Command.h"
 #include <string>
 
 class Incident;

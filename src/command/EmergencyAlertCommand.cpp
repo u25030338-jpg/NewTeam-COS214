@@ -1,5 +1,6 @@
-#include "command/EmergencyAlertCommand.h"
-#include "domain/Incident.h"
+#include "EmergencyAlertCommand.h"
+#include "Incident.h"
+#include "Mediator.h"
 
 #include <iostream>
 
@@ -17,4 +18,6 @@ void EmergencyAlertCommand::execute()
               << incident.getId()
               << ": " << message
               << std::endl;
+
+    if(incident.getMediator()) incident.getMediator()->notify(nullptr, incident, "EMERGENCY_ALERT");
 }
