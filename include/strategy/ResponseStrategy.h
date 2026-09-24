@@ -10,7 +10,6 @@ class ResponseStrategy
     public:
         virtual ~ResponseStrategy() = default;
         virtual bool execute(Incident& incident) = 0;
-        virtual void respond(Incident& incident) = 0;
         virtual const char* getName() const = 0;
     protected:
         bool prepareIncident(Incident& incident);
