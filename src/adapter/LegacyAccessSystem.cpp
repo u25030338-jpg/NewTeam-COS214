@@ -20,7 +20,7 @@ int LegacyAccessSystem::releaseLockdown(const std::string& zoneCode) {
 
 int LegacyAccessSystem::SetPartialRestriction(const std::string& zoneCode, int level){
     if(zoneCode == lastRestrictedZone){
-        std::cout <<"[LEGACY] Zone" << zoneCode << " is already restricted -- rejecting duplicate restriction request." << std::endl;
+        std::cout <<"[LEGACY] Zone " << zoneCode << " is already restricted -- rejecting duplicate restriction request." << std::endl;
 
         return 1;
     }

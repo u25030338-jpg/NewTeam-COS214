@@ -1,4 +1,4 @@
-#include "AccessControlAdpater.h"
+#include "AccessControlAdapter.h"
 #include "LegacyAccessSystem.h"
 
 #include <algorithm>
