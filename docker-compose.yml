@@ -1,0 +1,4 @@
+services:
+  campusguard:
+    build: .
+    container_name: campusguard

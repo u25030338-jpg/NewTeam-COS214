@@ -1,16 +1,16 @@
-#include "domain/Incident.h"
+#include "Incident.h"
 
-#include "adapter/AccessControlAdapter.h"
-#include "adapter/LegacyAccessSystem.h"
+#include "AccessControlAdapter.h"
+#include "LegacyAccessSystem.h"
 
-#include "domain/SecurityTeam.h"
-#include "domain/MedicalTeam.h"
-#include "domain/FacilitiesTeam.h"
-#include "domain/CommunicationService.h"
+#include "SecurityTeam.h"
+#include "MedicalTeam.h"
+#include "FacilitiesTeam.h"
+#include "CommunicationService.h"
 
-#include "mediator/EmergencyMediator.h"
+#include "EmergencyMediator.h"
 
-#include "facade/EmergencyResponseFacade.h"
+#include "EmergencyResponseFacade.h"
 
 #include <iostream>
 
